@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasan Welcome Pages</title>
+
+
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('backround.png') center/cover fixed no-repeat;
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, .55);
+            min-height: 100vh
+        }
+
+        .page {
+            display: none;
+            min-height: 100vh;
+            padding: 30px;
+            align-items: center;
+            justify-content: center
+        }
+
+        .page.active {
+            display: flex
+        }
+
+        .card {
+            max-width: 1000px;
+            width: 100%;
+            background: rgba(255, 255, 255, .12);
+            backdrop-filter: blur(8px);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, .4);
+        }
+
+        .welcome-banner {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .4);
+        }
+
+        .main-heading {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 15px;
+
+            text-shadow:
+                0 0 10px rgba(255, 255, 255, .5),
+                0 0 20px rgba(255, 255, 255, .3);
+        }
+
+        .sub-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        h1,
+        p {
+            line-height: 1.7
+        }
+
+        /* ✅ CENTER BUTTON */
+        .btn {
+            margin-top: 25px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .next {
+            background: #fff;
+            color: #000
+        }
+
+        .warning {
+            color: #ff3b3b;
+            font-weight: bold
+        }
+
+        .small {
+            font-size: .85rem;
+            opacity: .9
+        }
+
+        .choice {
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 10px;
+            background: #fff;
+            color: #000;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold
+        }
+
+        .choice.disabled {
+            opacity: .5;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        #poem {
+            margin-top: 15px;
+            white-space: pre-line
+        }
+
+        .qrwrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            align-items: center
+        }
+
+        .qrbox img {
+            width: 220px;
+            height: auto;
+            display: block;
+            margin: auto;
+            animation: floatQR 4s ease-in-out infinite;
+        }
+
+        .qrbox {
+            padding: 20px;
+            background: rgba(255, 255, 255, .18);
+            border-radius: 20px;
+            overflow: hidden;
+            animation: qrGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes qrGlow {
+
+            0%,
+            100% {
+                box-shadow:
+                    0 0 20px rgba(255, 255, 255, 0.6),
+                    0 0 40px rgba(255, 255, 255, 0.4);
+            }
+
+            50% {
+                box-shadow:
+                    0 0 35px rgba(255, 255, 255, 0.9),
+                    0 0 70px rgba(255, 255, 255, 0.7),
+                    0 0 100px rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        /* ✅ QR FLOAT ANIMATION */
+        @keyframes floatQR {
+            0% {
+                transform: translate(0px, 0px);
+            }
+
+            25% {
+                transform: translate(8px, -6px);
+            }
+
+            50% {
+                transform: translate(0px, -12px);
+            }
+
+            75% {
+                transform: translate(-8px, -6px);
+            }
+
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            font-size: 10px;
+            color: #ddd
+        }
+
+        @media(max-width:768px) {
+            .card {
+                padding: 20px
+            }
+
+            .qrwrap {
+                flex-direction: column;
+                text-align: center
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+
+        <section class="page active" id="p1">
+            <div class="card">
+
+                <img class="welcome-banner"
+                    src="https://img.magnific.com/free-photo/future-visions-business-technology-concept_23-2151893421.jpg?semt=ais_hybrid&w=740&q=80"
+                    alt="Welcome">
+
+                <h1 class="main-heading">
+                    Hasan Welcomes You in this Sphere ✨
+                </h1>
+
+                <p class="sub-text">
+                    Thank you for visiting this page. Explore, discover, and enjoy your stay.
+                    Every click opens a new story. Welcome to our world. You've just stepped
+                    into a place where imagination meets innovation.
+                </p>
+                <br>
+                <p class="warning">
+                    ⚠️ <strong>WARNING!!!</strong> ⚠️ <br>
+                    Before moving forward make sure you sit somewhere. Because if you watch this roaming here and there,
+                    there may be many distractions.
+                </p>
+                <br>
+                <p>
+                    Instead of heading directly to the main page, let's have some fun sessions.
+                </p>
+
+                <button class="btn next" onclick="nextPage()">Next Page</button>
+
+            </div>
+        </section>
+        <section class="page" id="p2">
+            <div class="card">
+                <p>If I write a two line poem for you, it would be like :-</p>
+                <p><br>"I was here &amp; you were there<br>That's why the poem ends here 🤣😂"</p>
+                <p class="small"><br>(No, no, I'm not this much bad in writing. May be I'm not Shakespear but can write
+                    something meaningful. It's just for entertainment.)</p>
+                <button class="btn next" onclick="nextPage()">Next Page</button>
+            </div>
+        </section>
+
+        <section class="page" id="p3">
+            <div class="card">
+                <p>In songs we sing :- "Chahu tujhe, dil e kahe, chahe sans e rahe ya na rahe" from song- 'Itna Pyaar
+                    Karo' </p> <br>
+                <p>But as a biology student:- Agar sans hi na rahe to tu jinda kaise rahega re? Fir tu use chahega
+                    kaise?</p> <br>
+                <p>Thik hai e sab choro, e toh song ki baat hai. Eha kuch bhi bola jata hai.</p>
+                <button class="btn next" onclick="nextPage()">Next Page</button>
+            </div>
+        </section>
+
+        <section class="page" id="p4">
+            <div class="card">
+                <p>In some other song:- "Mere haath me, tera haath ho, sari jannate mere sath ho" from song- 'Mere Haath
+                    me'</p> <br>
+                <p>God be like:- Tu khud ki dono ki dono tange narak ki ughalte hue aag me dal rakha hai, aur tu kisi
+                    aur ko jannat le jane ki baatein kar raha hai. Tu kaun hai be re 😂.</p>
+                <p class="small"><br>(Personally I don't dislike any of the songs. But just to make some laughter
+                    scenario I've used them as an entertainment element. Don't take it serious.)</p>
+                <button class="btn next" onclick="nextPage()">Next Page</button>
+            </div>
+        </section>
+
+        <section class="page" id="p5">
+            <div class="card">
+                <p>I'm a (Here 'I' means 'You' not me.)</p>
+                <div>
+                    <span class="choice" id="boyBtn" onclick="boy()">BOY</span>
+                    <span class="choice" id="girlBtn" onclick="girl()">GIRL</span>
+                </div>
+                <div id="poem"></div>
+                <button class="btn next" onclick="nextPage()">Next Page</button>
+            </div>
+        </section>
+
+        <section class="page" id="p6">
+            <div class="card">
+                <p>Chalo baat ko aur nahi ghumate hai. Ab main topic pe a jate hai..</p>
+                <button class="btn next" onclick="nextPage()">Next Page</button>
+            </div>
+        </section>
+
+        <section class="page" id="p7">
+            <div class="card">
+                <div class="qrwrap">
+                    <div class="qrbox">
+                        <img src="https://drive.google.com/thumbnail?id=13LibgWnpHSPqe926Ij6yYpWn6NT8avaH&sz=w1000">
+                    </div>
+                    <div>
+                        <h2>I guess you're much intelligent. Now you know what to do next. Do that.</h2> <br>
+                        <p> Have a great day ahead.🤝 </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer">(All the content used is just for entertainment. Nothing is to criticise anything or anyone
+            or any part. Just only for entertainment purpose.)</div>
+
+    </div>
+
+    <script>
+
+        let current = 1;
+
+        function nextPage() {
+            document.getElementById('p' + current).classList.remove('active');
+            current = Math.min(current + 1, 7);
+            document.getElementById('p' + current).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        let selected = false;
+
+        function boy() {
+
+            if (selected) return;
+            selected = true;
+
+            document.getElementById('poem').innerText = `This is only for you - 
+
+"Kuch log bas mil jaate
+ Aur din ko behtar bana jaate hai
+ Tu unhi mein se ek hai,
+ Jo muskurahat chhod jaate hain".`;
+
+            document.getElementById("girlBtn").style.display = "none";
+            document.getElementById("boyBtn").style.pointerEvents = "none";
+        }
+
+        function girl() {
+
+            if (selected) return;
+            selected = true;
+
+            document.getElementById('poem').innerText = `This is only for you -
+
+"Na koi badi baat hai
+ Na koi gehri kahani....
+ Bas tu saamne ho to lagta hai,
+ Din ho gaya thoda aur suhani...."`;
+
+            document.getElementById("boyBtn").style.display = "none";
+            document.getElementById("girlBtn").style.pointerEvents = "none";
+        }
+
+    </script>
+
+</body>
+
+</html>

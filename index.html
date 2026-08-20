@@ -103,9 +103,44 @@
         }
 
         .warning {
-            color: #ff3b3b;
-            font-weight: bold
+            color: #fff;
+            font-weight: normal;
+            text-align: center;
         }
+
+        .warning-word {
+            font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+            font-size: 2rem;
+            color: #ff2222;
+            letter-spacing: 2px;
+
+            text-shadow:
+                0 0 5px #ff0000,
+                0 0 10px #ff0000,
+                0 0 20px #ff0000;
+
+            animation: warningGlow .5s ease-in-out infinite alternate;
+        }
+
+        @keyframes warningGlow {
+
+            from {
+                text-shadow:
+                    0 0 5px #ff0000,
+                    0 0 10px #ff0000,
+                    0 0 20px #ff0000;
+            }
+
+            to {
+                text-shadow:
+                    0 0 10px #ff0000,
+                    0 0 20px #ff0000,
+                    0 0 40px #ff0000,
+                    0 0 60px rgba(255, 0, 0, 0.8);
+            }
+        }
+
+
 
         .small {
             font-size: .85rem;
@@ -240,9 +275,14 @@
                 </p>
                 <br>
                 <p class="warning">
-                    ⚠️ <strong>WARNING!!!</strong> ⚠️ <br>
+
+                    ⚠️ <span class="warning-word">WARNING!!!</span> ⚠️
+
+                    <br>
+
                     Before moving forward make sure you sit somewhere. Because if you watch this roaming here and there,
                     there may be many distractions.
+
                 </p>
                 <br>
                 <p>

@@ -20,7 +20,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: url('backround.png') center/cover fixed no-repeat;
+            background: url('background.png') center/cover fixed no-repeat;
             min-height: 100vh;
             color: #fff;
         }
@@ -175,9 +175,12 @@
 
         .qrwrap {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            flex-wrap: nowrap;
             gap: 25px;
-            align-items: center
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
         .qrbox img {
@@ -246,14 +249,17 @@
         }
 
         @media(max-width:768px) {
+
             .card {
-                padding: 20px
+                padding: 20px;
             }
 
-            .qrwrap {
-                flex-direction: column;
-                text-align: center
-            }
+        }
+
+        .qrwrap {
+            flex-direction: column;
+            text-align: center
+        }
         }
     </style>
 </head>
@@ -264,9 +270,7 @@
         <section class="page active" id="p1">
             <div class="card">
 
-                <img class="welcome-banner"
-                    src="https://img.magnific.com/free-photo/future-visions-business-technology-concept_23-2151893421.jpg?semt=ais_hybrid&w=740&q=80"
-                    alt="Welcome">
+                <img class="welcome-banner" src="welcome banner.png" alt="Welcome">
 
                 <h1 class="main-heading">
                     Hasan Welcomes You in this Sphere ✨
@@ -355,7 +359,7 @@
             <div class="card">
                 <div class="qrwrap">
                     <div class="qrbox">
-                        <img src="https://drive.google.com/thumbnail?id=13LibgWnpHSPqe926Ij6yYpWn6NT8avaH&sz=w1000">
+                        <img src="QR.png">
                     </div>
                     <div>
                         <h2>I guess you're much intelligent. Now you know what to do next. Do that.</h2> <br>
